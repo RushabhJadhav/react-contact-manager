@@ -7,7 +7,14 @@ const Contacts = () => {
         <ul>
             {
                 contacts.map(item => {
-                    return <li key={item.id}>{item.text}</li>
+                    console.log(item)
+                    return (
+                        <li key={item.id}>
+                            <h2>Name : {`${item.obj.firstName} ${item.obj.lastName}`}</h2>
+                            <h2>Number : {item.obj.number}</h2>
+                            <h2>email : {item.obj.email}</h2>
+                        </li>
+                    )
                 })
             }
         </ul>

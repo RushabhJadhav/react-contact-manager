@@ -11,7 +11,7 @@ export const contactSlice = createSlice({
         addContact: (state, action) => {
             const todo = {
                 id: nanoid().slice(0, 4),
-                text: action.payload,
+                obj: action.payload.name,
             }
             state.contactItem.push(todo)
         }
