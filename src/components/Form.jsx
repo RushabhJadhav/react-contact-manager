@@ -18,7 +18,7 @@ const Form = ({showForm}) => {
     }
 
     return (
-        <form style={{display: showForm ? 'block' : 'none', width: '200px'}} onSubmit={handleSubmit}>
+        <form style={{display: showForm ? 'block' : 'none'}} onSubmit={handleSubmit}>
             <input 
                 type="text" 
                 placeholder="First Name" 

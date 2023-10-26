@@ -1,12 +1,11 @@
-import './App.css'
 import Contacts from './components/Contacts'
-import AddContacts from './components/AddContacts'
+import Header from './components/Header'
 
 function App() {
 
   return (
     <>
-      <AddContacts />
+      <Header />
       <Contacts />
     </>
   )
