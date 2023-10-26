@@ -11,7 +11,7 @@ const AddContacts = () => {
 
     return (
         <>
-            <div className="header">
+            <div className="add-cont">
                 <input type="text" placeholder="Search contacts..." />
                 <button onClick={handleSubmit}>+</button>
             </div>
