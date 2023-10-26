@@ -10,7 +10,7 @@ export const contactSlice = createSlice({
     reducers: {
         addContact: (state, action) => {
             const todo = {
-                id: nanoid(),
+                id: nanoid().slice(0, 4),
                 text: action.payload,
             }
             state.contactItem.push(todo)

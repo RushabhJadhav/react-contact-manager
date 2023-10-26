@@ -1,22 +1,22 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addContact } from "../features/contactSlice";
+import Form from "./Form";
 
 const AddContacts = () => {
-    const [input, setInput] = useState('');
-    const dispatch = useDispatch();
+    const [display, setDisplay] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        dispatch(addContact(input))
-        setInput('')
+        setDisplay(prevState => !prevState)
     }
 
     return (
-        <div>
-            <input type="text" value={input} onChange={e => setInput(e.target.value)} />
-            <button onClick={handleSubmit}>Add</button>
-        </div>
+        <>
+            <div>
+                <input type="text" placeholder="search contacts..." />
+                <button onClick={handleSubmit}>Add</button>
+            </div>
+            <Form showForm={display} />
+        </>
     )
 }
 
