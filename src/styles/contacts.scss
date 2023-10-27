@@ -1,0 +1,13 @@
+ul {
+    // border: 1px solid red;
+    width: 50%;
+    margin: 50px auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    li {
+        list-style-type: none;
+        border: 1px solid red;
+    }
+}
