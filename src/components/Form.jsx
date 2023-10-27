@@ -14,11 +14,12 @@ const Form = ({showForm}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(addContact({name: input}))
-        setInput({firstName: '', lastName: '', number: 0, email: ''})
+        setInput({firstName: '', lastName: '', number: '', email: ''})
     }
 
     return (
         <form style={{top: showForm ? '30vh' : '-50%', }} onSubmit={handleSubmit}>
+            {/* <h2>Add Contact</h2> */}
             <input 
                 type="text" 
                 placeholder="First Name" 
@@ -43,7 +44,7 @@ const Form = ({showForm}) => {
                 value={input.email} 
                 onChange={e => setInput({...input, email: e.target.value})} 
             />
-            <button type="submit">Add Contact</button>
+            <button type="submit">Add</button>
         </form>
     )
 }

@@ -1,4 +1,8 @@
 import { useSelector } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
+import { faSquarePhoneFlip } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 
 const Contacts = () => {
     const contacts = useSelector((state) => state.contact.contactItem)
@@ -7,16 +11,23 @@ const Contacts = () => {
         <ul>
             {
                 contacts.map(item => {
-                    console.log(item)
                     return (
                         <li key={item.id}>
-                            <h2>Name : {`${item.obj.firstName} ${item.obj.lastName}`}</h2>
-                            <h2>Number : {item.obj.number}</h2>
-                            <h2>email : {item.obj.email}</h2>
-                            <div>
-                                <button>Edit</button>
-                                <button>Call</button>
-                                <button>Delete</button>
+                            <p><span>Name</span> : {`${item.obj.firstName} ${item.obj.lastName}`}</p>
+                            <p><span>No.</span> : {item.obj.number}</p>
+                            <p><span>Email</span> : {item.obj.email}</p>
+                            <div className="icons-cont">
+                                <button className="icons">
+                                    <FontAwesomeIcon icon={faPenToSquare} />
+                                </button>
+                                <button className="icons">
+                                    <a href="tel:8355907597">
+                                    <FontAwesomeIcon icon={faSquarePhoneFlip} />
+                                    </a>
+                                </button>
+                                <button className="icons">
+                                    <FontAwesomeIcon icon={faTrashCan} />
+                                </button>
                             </div>
                         </li>
                     )
