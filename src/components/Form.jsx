@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addContact } from "../features/contactSlice";
 
-const Form = ({showForm}) => {
+const Form = ({showForm, closeForm}) => {
     const [input, setInput] = useState({
         firstName: '',
         lastName: '',
@@ -17,9 +17,13 @@ const Form = ({showForm}) => {
         setInput({firstName: '', lastName: '', number: '', email: ''})
     }
 
+    const handleClose = () => {
+        closeForm(prevState => !prevState)
+    }
+
     return (
         <form style={{top: showForm ? '30vh' : '-50%', }} onSubmit={handleSubmit}>
-            {/* <h2>Add Contact</h2> */}
+            <span className="close-btn" onClick={handleClose}>&#215;</span>
             <input 
                 type="text" 
                 placeholder="First Name" 

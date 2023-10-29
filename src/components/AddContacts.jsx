@@ -15,7 +15,7 @@ const AddContacts = () => {
                 <input type="text" placeholder="Search contacts..." />
                 <button onClick={handleSubmit}>+</button>
             </div>
-            <Form showForm={display} />
+            <Form showForm={display} closeForm={setDisplay} />
         </>
     )
 }
