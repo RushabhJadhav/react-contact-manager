@@ -1,21 +1,22 @@
-import { useState } from "react"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faMoon } from "@fortawesome/free-regular-svg-icons"
-// import { faSun } from "@fortawesome/free-regular-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMoon } from "@fortawesome/free-regular-svg-icons"
+import { faSun } from "@fortawesome/free-regular-svg-icons"
 
-const DarkMode = () => {
-    const [checked, setChecked] = useState(false)
+const DarkMode = ({darkMode, setDarkMode}) => {
 
-    const handleCheckbox = () => {
-        setChecked(prevState => !prevState)
+    const handleClick = () => {
+        setDarkMode(prevState => !prevState)
     }
 
     return (
         <>
-            <label className="toggle-switch">
-                <input type="checkbox" checked={checked} onChange={handleCheckbox} />
-                <span className="slider"></span>
-            </label>
+            <div className="dark-mode-cont" onClick={handleClick}>
+                {
+                    darkMode ?
+                    <FontAwesomeIcon icon={faMoon} /> :
+                    <FontAwesomeIcon icon={faSun} />
+                }
+            </div>
         </>
     )
 }

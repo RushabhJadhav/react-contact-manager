@@ -1,5 +1,5 @@
 form {
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     display: grid;
@@ -15,11 +15,13 @@ form {
     background-color: $light;
 
     &::after {
-        content: "X";
+        content: "\00D7";
         position: absolute;
         top: 15px;
         right: 15px;
         cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bold;
     }
 
     &::before {
