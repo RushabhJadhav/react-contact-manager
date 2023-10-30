@@ -43,3 +43,25 @@ ul {
         }
     }
 }
+
+.dark-mode {
+    ul {
+        li {
+            background-color: $dark-2;
+            border: none;
+            color: $light;
+
+            .icons-cont {
+
+                .icons {
+                    background-color: $grey;
+                    color: $light;
+                    
+                    a {
+                        color: $light;
+                    }
+                }
+            }
+        }
+    }
+}

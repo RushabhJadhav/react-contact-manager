@@ -13,8 +13,8 @@ const DarkMode = ({darkMode, setDarkMode}) => {
             <div className="dark-mode-cont" onClick={handleClick}>
                 {
                     darkMode ?
-                    <FontAwesomeIcon icon={faMoon} /> :
-                    <FontAwesomeIcon icon={faSun} />
+                    <FontAwesomeIcon icon={faSun} /> :
+                    <FontAwesomeIcon icon={faMoon} />
                 }
             </div>
         </>

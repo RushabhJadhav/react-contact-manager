@@ -9,11 +9,11 @@ function App() {
   localStorage.setItem('dark', darkMode)
 
   return (
-    <>
+    <div className={`${darkMode ? 'dark-mode': ''}`}>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <AddContacts />
       <Contacts />
-    </>
+    </div>
   )
 }
 

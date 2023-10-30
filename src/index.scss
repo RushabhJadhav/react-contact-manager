@@ -4,15 +4,22 @@
 @import './styles/form.scss';
 @import './styles/darkmode.scss';
 @import './styles/contacts.scss';
-@import '@fontsource-variable/inter';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter Variable', sans-serif;
+    font-family: $inter;
 }
 
 body {
     background-color: $light;
+    
+    #root {
+        height: 100vh;
+    }
+    
+    .dark-mode {
+        background-color: $dark;
+    }
 }

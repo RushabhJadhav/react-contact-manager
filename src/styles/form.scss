@@ -49,3 +49,29 @@ form {
         border-radius: 2px;
     }
 }
+
+.dark-mode {
+    form {
+        background-color: $dark;
+
+        &::before {
+            color: $light;
+        }
+
+        .close-btn {
+            color: $light;
+            font-weight: 400;
+        }
+
+        input {
+            background-color: $dark-2;
+            border: none;
+            outline: none;
+            color: $light;
+
+            &::placeholder {
+                color: $grey-2;
+            }
+        }
+    }
+}

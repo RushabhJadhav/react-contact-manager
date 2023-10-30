@@ -10,10 +10,24 @@
     transition: all .2s ease;
 
     &:hover {
-        background-color: #ebedf0;
+        background-color: $light-hover;
     }
 
     svg {
         font-size: 1.5rem;
+    }
+}
+
+.dark-mode {
+    .header {
+        h1 {
+            color: $light;
+        }
+        .dark-mode-cont {
+            color: $light;
+            &:hover {
+                background-color: $dark-hover;
+            }
+        }
     }
 }
