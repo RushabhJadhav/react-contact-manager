@@ -22,7 +22,7 @@ const Form = ({showForm, closeForm}) => {
     }
 
     return (
-        <form style={{top: showForm ? '30vh' : '-50%', }} onSubmit={handleSubmit}>
+        <form style={{top: showForm ? '30vh' : '-100%', }} onSubmit={handleSubmit}>
             <span className="close-btn" onClick={handleClose}>&#215;</span>
             <input 
                 type="text" 

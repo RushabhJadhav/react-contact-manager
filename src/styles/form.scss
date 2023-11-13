@@ -36,6 +36,7 @@ form {
         padding-left: 10px;
         height: 30px;
         width: 100%;
+        border-radius: 3px;
     }
 
     button {
@@ -73,5 +74,11 @@ form {
                 color: $grey-2;
             }
         }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    form {
+        width: 80%;
     }
 }

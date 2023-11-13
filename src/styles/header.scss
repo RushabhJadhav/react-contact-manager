@@ -13,3 +13,13 @@
         transform: translateX(-50%);
     }
 }
+
+@media screen and (max-width: 450px) {
+    .header {
+        h1 {
+            right: 0;
+            transform: translateX(0);
+            font-size: 2rem;
+        }
+    }
+}
